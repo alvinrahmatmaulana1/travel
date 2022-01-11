@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("_ _**_ _ SISTEM INFORMASI PERHOTELAN _ _**_ _ <br><br>");
+        nama = prompt("Masukan Nama pelanggan : ");
+        document.write("Pilih jenis kamar : <br>");
+        document.write("1. Deluxe Room Rp.275.000/hari <br>");
+        document.write("2. Suite Room Rp.300.000/hari <br>");
+        document.write("3. President Room Rp.370.000/hari <br>");
+        kamar1 = 275000;
+        kamar2 = 300000;
+        kamar3 = 370000;
+        kamar = prompt("Jenis kamar yang dipesan : ");
+        document.write("Jenis kamar yang dipesan : " + kamar + "<br>");
+        LamaMenginap = prompt("Lama menginap : ");
+        document.write("Status pelanggan : <br>");
+        document.write("1.Member <br>");
+        document.write("2.Non Member <br>");
+        status=prompt("Pilih status pelanggan : ");
+        document.write("status pelanggan : " + status +"<br> <br> <br>");
+        bayar=prompt("masukan uang anda")
+        document.write("_ _**_ _NOTA PEMBAYARAN HOTEL EVE _ _**_ _<br><br>")
+        //nota
+        var nama=prompt("masukan nama")
+        var jenis= prompt("masukan jenis")
+        var lama= prompt("lama menginap : ")
+        var bayar= prompt("masukan uang anda")
+        var kamar="";
+        var tarif=0;
+        var diskon=0;
+        var nominal=0;
+
+
+        //proses penghitungan
+        if (jenis ==1){
+            tarif = lama*275000
+            kamar = "duluxe room"
+        }else if(jenis ==2){
+            tarif = lama*300000
+            kamar = "suite room"
+        }else if(jenis ==3){
+            tarif = lama*370000
+            kamar = "president room"
+        }
+        
+        if(status ==1){
+            if(lama>=4 && lama<=7){
+                diskon=0.20*tarif;
+            }else if(lama>7){
+                diskon=0.35*tarif;
+            }
+        }else if(status ==2){
+            if(lama>=4 && lama<=7){
+                diskon = 0.10*tarif;
+            }else if (lama>7){
+                diskon = 0.15*tarif
+            }
+        }
+        nominal= tarif-diskon;
+        kembalian= bayar-nominal
+
+
+        document.write("nama pelanggan : " + nama + "<br>");
+        document.write("jenis kamar : " + kamar + "<br>");
+        document.write("lama menginap: " + lama + "<br>");
+        document.write("tarif penginapan : " + tarif + "<br>");
+        document.write("diskon penginap : " +diskon + "<br>");
+        document.write("nominal yang harus di bayar : " + nominal + "<br>");
+        document.write("bayar : " + bayar + "<br>")
+        document.write("kembalian anda : " + kembalian)
+    </script>
+</body>
+</html>

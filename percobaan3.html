@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+        box-shadow: 0px 4px 8px red;
+        border: none;
+        cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function hitungtotal()
+ {
+  var nama=(document.f10115456.inama.value);
+  var makanan=(document.f10115456.imakanan.value);
+  var jumlahmakanan=parseFloat(document.f10115456.ijumlahmakan.value);
+  var pembayaran=parseFloat(document.f10115456.ipembayaran.value)
+  
+  var hm=0.0;
+  var total=0.0;
+  var kembalian=0.0;
+
+
+  
+   if((makanan=="Pizza"))
+    {  hm=55000;  }
+    else if((makanan=="Nasi Goreng"))
+     {   hm=15000;  }
+     else if((makanan=="Es Teh"))
+      {   hm=5000;  }
+      else if((makanan=="Kopi"))
+       {   hm=15000;  }
+           else if(makanan=="Soto")
+            { hm=25000 }
+            else if(makanan=="Sate")
+            { hm=30000; }
+            else if(makanan=="Jus Buah")
+            { hm=20000}
+            else(makanan=="Macha")
+            { hm=25000}
+            total=jumlahmakanan*hm;
+            kembalian=pembayaran-total;
+            document.f10115456.ohm.value=eval(hm);
+            document.f10115456.ototal.value=eval(total);
+    document.f10115456.okembalian.value=eval(kembalian);
+ }
+    </script>
+    <form name="f10115456">
+    <table border="2"align="center"width="70%"class="card">
+    <tr><td width="100%"colspan="2" bgcolor="blue">
+    <h2 align="center">Menu Pendopo Lawas</h2></td></tr>
+    <tr><td width="50%"><pre>
+     Nama        :<input type="text" size="20" name="inama">
+     Makanan     :<select name="imakanan" size="1">
+         <option value="Pizza">pizza</option>
+         <option value="Nasi Goreng">nasi goreng</option>
+         <option value="Es Teh">teh</option>
+         <option value="Kopi">kopi</option>
+         <option value="Soto">soto</option>
+         <option value="Sate">sate</option>
+         <option value="Jus Buah">jus buah</option>
+         <option value="Macha">macha</option>
+         
+        </select>
+    Jumlahmakanan:<input type="text" size="11" name="ijumlahmakan">
+    Membayar     :<input type="text" size="11" name="ipembayaran">
+        <td width="50%"><pre>
+            Harga Makan    :<input type="text" size="10" name="ohm">
+            Total Bayar    :<input type="text" size="10" name="ototal">
+            kembalian      :<input type="text" size="10" name="okembalian">
+           
+           </td></pre>
+           </tr>
+           <tr>
+            <td width="100%" colspan="2">
+            <center>
+             <input type="button" value="Hitung" class="btn" onclick="hitungtotal()">
+             <input type="reset" value="ulang" class="btn">
+            </center>
+            </td>
+           </tr>
+           </table>
+           </form>
+</body>
+</html>

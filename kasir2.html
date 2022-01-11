@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("_ _**_ _ SISTEM PEMBAYARAN DI TUKANG PARABOT _ _**_ _ <br><br>");
+        var nama=prompt("masukan nama")
+        var jenis=prompt("masukan jenis barang")
+        var jumlah=prompt("masukan jumlah yang ingin dibeli");
+        var bayar=prompt("masukan uang")
+        var barang=""
+        var tarif=0;
+        
+
+        //proses perhitungan
+        if(jenis ==1){
+            tarif=jumlah*45000
+            barang="sapu"
+        }else if(jenis ==2){
+            tarif = jumlah*65000
+            barang = "lap pel"
+        }else if(jenis ==3){
+            tarif = jumlah*30000
+            barang = "ember"
+        }else if(jenis ==4){
+            tarif = jumlah*15000
+            barang = "gayung"
+        }
+
+        kembalian =bayar-tarif;
+
+        document.write("nama pelanggan : " + nama + "<br>");
+        document.write("jenis barang : " + barang + "<br>");
+        document.write("jumlah yang ingin dibeli : " + jumlah + "<br>");
+        document.write("Tarif : " + tarif + "<br>");
+        document.write("bayar : " + bayar + "<br>");
+        document.write("Kembalian anda : " + kembalian )
+
+    </script>
+</body>
+</html>

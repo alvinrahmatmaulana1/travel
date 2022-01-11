@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel</title>
+    <style>
+        .center{
+           position: center;
+           background-image: url(../images/Eve-Hotel.jpg);
+           font: 1em sans-serif;
+           font-style: unset;
+           color: darkred;
+           width:auto;
+           height:auto;
+        }
+         
+    </style>
+</head>
+<body class="center" bgcolor="gray">
+        <script language="JavaScript">
+        function hitung()
+        { var nama=(document.dedeform.inama.value);
+          var tipe=(document.dedeform.itipe.value);
+          var bayar=(document.dedeform.ibayar.value);
+          var status=(document.dedeform.istatus.value);
+          var lama=parseFloat(document.dedeform.ilama.value);
+          var membayar=(document.dedeform.imembayar.value);
+          var um="0.0";
+          var tarif=0.0;
+          var bayar=0.0;
+          var diskon=0.0;
+
+          if (tipe=="Deluxe Room"){
+              tarif=lama*275000;
+              kamar ="Deluxe Room"
+          }else if(tipe=="Suite Room"){
+              tarif=lama*300000
+              kamar="Suite Room";
+          }else if(tipe=="President Room"){
+              tarif=lama*375000
+              kamar="President Room";
+          }
+          
+          if (status=="Member"){
+              if (lama >=4,lama <=7){
+                  diskon=0.20*tarif;
+              }else if (lama >=7){
+                  diskon=0.35*tarif
+              }
+          }else if(status=="Non-member"){
+              if (lama >=4,lama <=7){
+                  diskon=0.10*tarif
+              }else if (lama >=7){
+                  diskon=0.15*tarif;
+              }
+          }
+
+          bayar = tarif-diskon;
+          total = bayar; 
+          kembalian = total-membayar;
+
+          document.dedeform.onama.value=nama;
+          document.dedeform.obayar.value=bayar;
+          document.dedeform.odiskon.value=(diskon);
+          document.dedeform.total.value=(total);
+          document.dedeform.kembalian.value=(kembalian);
+        }
+        </script>
+        <center>
+        <form name="dedeform">
+        <pre>
+          <h1>HOTEL EVE Cibaduyut</h1> 
+          <h2>Masukan pilihan anda!
+         Nama  : <input type="text" name="inama">
+         Status  : <input type="text" name="istatus">
+         Tipe : <input type="text" name="itipe">
+         Lama  : <input type="text" name="ilama">
+         Harga inap/hari  : <input type="number" name="ibayar">
+         Membayar  : <input type="number" name="imembayar">
+         <input type="button" value ="kirim" OnClick="hitung()">
+         <input type="reset" value ="reset">
+        </h2>
+       
+         <hr>
+         <h1>HOTEL EVE Cibaduyut</h1> 
+         <h2>Selamat anda telah memesan kamar dengan rincian dibawah :
+         Nama  : <input type="text" name="onama">
+         Bayar  : <input type="text" name="obayar"> 
+         Diskon  : <input type="text" name="odiskon">
+         Total   : <input type="text" name="total">
+         Kembalian  : <input type="text" name="kembalian">
+         </h2>
+         <marquee scrolldelay="70" direction="left" bgcolor="gray"> >Terimakasih telah menginap di hotel eve< </marquee>
+         </pre>
+         </form>
+         </center>
+</body>
+</html>

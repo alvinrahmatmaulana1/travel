@@ -1,0 +1,98 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+          .tengah{
+              background-image: url(../images/download.png);
+              background-position: center;
+              width: 190px;
+              height: 190px;
+          }
+          table{
+              background: darkred;
+              margin:auto;
+          }
+      </style>
+  </head>
+  <body class="tengah">
+      <div>
+          <table border="2">
+              <h1  align="center" style="background: darkred;">Kasir</h1>
+              <tr>
+                  <th>Nama</th>
+                  <th><input type="text" id="nama" onchange="total()"></th>
+              </tr>
+              <tr>
+                  <th>Harga</th>
+                  <th><input type="number" id="harga" onchange="total()"></th>
+              </tr>
+              <tr>
+                  <th>Jumlah beli</th>
+                  <th><input type="number" id="jumlah" value="0" onchange="total()">
+              </tr>
+              <tr>
+                  <th>Kategori</th>
+                  <th><select id="status" onchange="total()">
+                  <option>Sapu</option>
+                  <option>Lap pel</option>
+                  <option>Ember</option>
+                  <option>Gayung</option>
+                  </select></th>
+              </tr>
+
+              <tr>
+                  <th>Jumlah Total</th>
+                  <th><input type="text" style="background: black;" id="total" disabled></th>
+              </tr>
+
+              <tr>
+                  <th>Pembayaran</th>
+                  <th><input type="number" id="bayar" onchange="total()"></th>
+              </tr>
+
+              <tr>
+                  <th>Kembalian</th>
+                  <th><input type="text" style="background: black;" id="total1" disabled></th>
+              </tr>
+
+              <tr>
+                  <th><input type="button" style="background: white;" onclick="window.print()" value="CETAK"></th>
+              </tr>
+
+              <tr>
+                  <table width="300" height="201px" border="7">
+                      <th><label align="landscape" id="cetak"></label></th>
+                  </table>
+              </tr>
+          </table>
+          <marquee scrolldelay="100" direction="left" bgcolor="darkred"> > welcome < </marquee>
+          <script type="text/javascript">
+              function total(){
+                  var nama = document.getElementById('nama').value;
+                  var harga = parseInt(document.getElementById('harga').value);
+                  var jumlah_beli = parseInt(document.getElementById('jumlah').value);
+                  var pembayaran = parseInt(document.getElementById('bayar').value);
+                  var jenis = document.getElementById("status").value;
+                  var jumlah_harga = harga*jumlah_beli;
+                  document.getElementById('total').value= jumlah_harga;
+
+                  var kembali= pembayaran-jumlah_harga;
+                  document.getElementById('total1').value = kembali;
+
+                  var cetak = "Nama : " + nama + "<br>"+
+                              "harga : " + harga + "<br>"+
+                              "Jumlah_beli : " + jumlah_beli + "<br>"+
+                              "Kategori : " + jenis + "<br>"+
+                              "Jumlah_total : " + jumlah_harga + "<br>"+
+                              "Pembayaran : " + pembayaran + "<br>"+
+                              "Kembalian : " + kembali;
+                document.getElementById("cetak").innerHTML=cetak;              
+              }
+          </script>
+      </div>
+  </body>
+  </html>

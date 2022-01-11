@@ -1,0 +1,21 @@
+<input min="0" id="input" placeholder="masukan Detik">
+<button id="btn">Konversi Waktu</button>
+<p id="result"></p>
+<script>
+    var x, y, Jam, Menit, Detik,
+    input = document.getElementById('input'),
+    btn = document.getElementById('btn'),
+    result = document.getElementById('result');
+
+    btn.addEventListener('click', function(){
+       x = input.value;
+       y = x % 3600;
+       hari = x /86400
+       jam = x / 3600;
+       menit = y / 60
+       detik = y % 60;
+
+   result.innerHTML = Math.floor(hari) + ' hari ' + Math.floor(jam) + ' jam '
+   + Math.floor(menit) + ' menit ' + Math.floor(detik) + ' detik ';
+    })
+</script>

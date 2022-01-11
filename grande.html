@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+      overflow-y: hidden;
+      margin:0;
+      padding: 0;
+      font-family: verdana;
+      background-color: green;
+    }
+
+    
+    p{
+      text-align:center;
+      margin: 50px auto;
+      margin-top: 10px;
+      padding: 10px;
+      font-weight: bold;
+      color: black;
+      font-family: verdana;
+      background-color: gray;
+      border-radius: 20px;
+    }
+  </style>
+    </style>
+</head>
+<body>
+    <script>
+        var nama = prompt("Masukan Nama");
+        var kelas = prompt("Masukan Kelas");
+        var nilai = prompt(" Nilai akhir");
+        var grade ="";
+
+        if(nilai >= 81){
+            grade = "A";
+        }
+        else if(nilai >= 61){
+            grade = "B";
+        }
+        else if(nilai >= 41){
+            grade = "C";
+        }
+        else if(nilai >= 16){
+            grade = "D";
+        }
+        else if(nilai >= 0){
+            grade = "E";
+        }
+        else{
+            grade = "F"
+        }
+        
+        document.write("<p>Nama : " + nama + "<br><?p>")
+        document.write("<P>Kelas : " + kelas + "<br></p>")
+        document.write(`<p>Nilai  anda : ${grade} </p>`);
+    </script>
+</body>
+</html>

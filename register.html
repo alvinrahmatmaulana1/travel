@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <style type="text/css">
+        body{
+          overflow-y: hidden;
+          margin:0;
+          padding: 0;
+          font-family: verdana;
+          background-image: url(../images/alvinstore.png);
+          background-size: 50%;
+        }
+        form{
+          font-family: arial;
+          background-color: rgb(255,255,255,0.7);
+          width: 300px;
+          margin: 180px auto;
+          padding: 30px;
+          text-align: right;
+          color: #2D2D2D;
+          border-radius: 40px 10px;
+          box-shadow: 2px 2px 7px #393939;
+        }
+        input{
+          margin: 10px;
+        }
+        input.send{
+          background-color: black;
+          color: red;
+          font-family: verdana;
+          font-weight: bold;
+          border-radius: 10px;
+          padding: 5px 10px;
+          margin: 30px 10px auto 0px;
+          text-transform: uppercase;
+          transition: .2s;
+        }
+        input.send:hover{
+          background-color: #9efc51;
+          color: blue;
+        }
+        
+        p{
+          text-align:center;
+          margin: 50px auto;
+          margin-top: 10px;
+          padding: 10px;
+          font-weight: bold;
+          color: black;
+          font-family: verdana;
+          
+          border-radius: 20px;
+        }
+      </style>
+</head>
+<body>
+
+  <form action="login.html" method="get" id="myForm" onsubmit=" return validasi()">
+        
+        <legend>Register</legend>
+        <p>
+            <label>Name:</label>
+            <input type="text" name="name" placeholder="your name" />
+        </p>
+        <p>
+            <label>Password:</label>
+            <input type="password" name="Password" placeholder="Password" />
+        </p>
+        <p>
+            <label>Email:</label>
+            <input type="email" name="email" placeholder="your email" />
+        </p>
+        <p>
+            <input type="submit" name="submit" value="Send" />
+        </p>
+        
+    </form>
+</body>
+</html>

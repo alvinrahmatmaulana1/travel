@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+      overflow-y: hidden;
+      margin:0;
+      padding: 0;
+      font-family: verdana;
+      background-color: green;
+    }
+
+    
+    p{
+      text-align:center;
+      margin: 50px auto;
+      margin-top: 10px;
+      padding: 10px;
+      font-weight: bold;
+      color: black;
+      font-family: verdana;
+      background-color: gray;
+      border-radius: 20px;
+    }
+    </style>
+</head>
+<body>
+    <script>
+        var nama = prompt ("Masukan nama");
+        var umur =  prompt ("Masukan Umur");
+        var output = "";
+
+        if(umur <= 5){
+            output = "<h2>Wah Masih Balita Ternyata</h2> "
+        }
+        else if(umur <= 12){
+            output = "<h2>Kamu Mah Masih Bocah</h2>"
+        }
+        else if(umur <= 18){
+            output = "<h2>Cie Yang Sudah Remaja</h2>"
+        }
+        else if(umur <= 40){
+            output = "<h2>Sudah Masuk Kategori Dewasa</h2>"
+        }
+        else if(umur <= 60){
+            output = "<h2>Orang Tua,Sudah Bisa Banyak Istirahat</h2>"
+        }
+        else if(umur >= 60){
+            output = "<h2>Panjang Umur Perjuangan,Sehat Terus Dan Bahagia Selalu</h2>"
+        }
+        else{
+
+        }
+        document.write("<P>Nama Anda : " + nama + "<br></p>")
+        document.write("<P>Umur Anda : " + umur + "<br></p>")
+        document.write(` ${output}`)
+
+    </script>
+</body>
+</html>
